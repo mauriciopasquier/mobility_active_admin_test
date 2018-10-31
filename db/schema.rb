@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_31_092211) do
+ActiveRecord::Schema.define(version: 2018_10_31_092544) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,6 +49,12 @@ ActiveRecord::Schema.define(version: 2018_10_31_092211) do
     t.datetime "updated_at", null: false
     t.index ["translatable_id", "translatable_type", "key"], name: "index_mobility_text_translations_on_translatable_attribute"
     t.index ["translatable_id", "translatable_type", "locale", "key"], name: "index_mobility_text_translations_on_keys", unique: true
+  end
+
+  create_table "things", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
